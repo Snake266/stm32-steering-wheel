@@ -1,0 +1,6 @@
+[submodule "include/stm32-snippets"]
+	path = include/stm32-snippets
+	url = https://github.com/Snake266/stm32-snippets.git
+[submodule "libopencm3"]
+	path = libopencm3
+	url = https://github.com/libopencm3/libopencm3
