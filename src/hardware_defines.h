@@ -20,15 +20,17 @@
 #define SWDCLK_PIN      GPIO14
 
 /***********************************/
-/* UART defines */
+/* USART defines */
 /***********************************/
-#define UART_PORT_RCC   RCC_USART1
-#define UART_PORT       GPIOA
-#define UART_CK_PIN     GPIO8
-#define UART_TX_PIN     GPIO9
-#define UART_RX_PIN     GPIO10
-#define UART_CTS_PIN    GPIO11
-#define UART_RTS_PIN    GPIO12
+#define USART_AF_NUM     GPIO_AF7
+
+#define USART_PORT_RCC   RCC_USART1
+#define USART_PORT       GPIOA
+#define USART_CK_PIN     GPIO8
+#define USART_TX_PIN     GPIO9
+#define USART_RX_PIN     GPIO10
+#define USART_CTS_PIN    GPIO11
+#define USART_RTS_PIN    GPIO12
 
 /***********************************/
 /* Gyroscope SPI defines */

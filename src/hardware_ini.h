@@ -16,7 +16,7 @@ void swd_setup(void);
 
 void clock_setup(void);
 
-void uart_setup(void);
+void usart_setup(void);
 
 /* Setup SPI1 */
 void spi1_setup(void);

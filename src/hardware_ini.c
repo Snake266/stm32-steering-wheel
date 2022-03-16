@@ -18,11 +18,21 @@ void clock_setup() {
     rcc_clock_setup_hsi(&rcc_hsi_configs[RCC_CLOCK_HSI_48MHZ]);
 }
 
-void uart_setup(void) {
-    rcc_periph_clock_enable(UART_PORT_RCC);
-    /* First of all, before setup disable the UART */
-    usart_disable(USART1);
+void usart_setup(void) {
+    rcc_periph_clock_enable(USART_PORT_RCC);
+    rcc_periph_clock_enable(RCC_GPIOA);
 
+    gpio_mode_setup(USART_PORT, GPIO_MODE_AF, GPIO_PUPD_NONE, USART_TX_PIN | USART_RX_PIN);
+    gpio_set_af(USART_PORT, USART_AF_NUM, USART_TX_PIN | USART_RX_PIN);
+
+    usart_set_baudrate(USART1, 115200);
+    usart_set_databits(USART1, 8);
+    usart_set_stopbits(USART1, USART_STOPBITS_1);
+    usart_set_mode(USART1, USART_MODE_TX_RX);
+    usart_set_parity(USART1, USART_PARITY_NONE);
+    usart_set_flow_control(USART1, USART_FLOWCONTROL_NONE);
+
+    usart_enable(USART1);
 }
 
 void spi1_setup(void) {
