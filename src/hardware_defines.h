@@ -6,9 +6,9 @@
 /***********************************/
 /* user buttons defines */
 /***********************************/
-#define USER_BUTTON_PORT_RCC  RCC_GPIOA
-#define USER_BUTTON_PORT      GPIOA
-#define USER_BUTTON_PIN       GPIO0
+#define USER_BUTTON_PORT_RCC    RCC_GPIOA
+#define USER_BUTTON_PORT        GPIOA
+#define USER_BUTTON_PIN         GPIO0
 
 /***********************************/
 /* SWD defines */
@@ -33,6 +33,9 @@
 /***********************************/
 /* Gyroscope SPI defines */
 /***********************************/
+
+#define GYRO_SPI_AF_NUM          GPIO_AF5
+
 /* Chip select port and pin */
 #define GYRO_SPI_CS_PORT    GPIOE
 #define GYRO_SPI_CS_PIN     GPIO3
